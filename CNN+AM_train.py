@@ -102,9 +102,8 @@ def train():
         ]
     )
 
-    # 混淆矩阵
-    from sklearn.metrics import accuracy_score, confusion_matrix
-    import seaborn as sns
+    # 计算精度
+    from sklearn.metrics import accuracy_score
 
     model = load_model('models/%s.h5' % start_time)
 
@@ -112,11 +111,6 @@ def train():
     y_pred_logical = (y_pred > 0.5).astype(np.int)
 
     print('test acc: %s' % accuracy_score(y_val, y_pred_logical))
-    cm = confusion_matrix(y_val, y_pred_logical)
-    sns.heatmap(cm, annot=True)
-
-    # 预测分布
-    # ax = sns.distplot(y_pred, kde=False)
 
 
 if __name__ == '__main__':
