@@ -35,3 +35,6 @@ Eye closure detection based on CNN
 本项目的[源代码](https://github.com/JasonCaoCJX/Eye-closure-detection-EAR)已完全公开
 
 欢迎关注[我的博客](https://jasoncaocjx.github.io)
+
+# 致谢
+感谢[Taehee Lee](https://dl.acm.org/profile/82858854957)对于卷积神经网络实现的帮助和解答
