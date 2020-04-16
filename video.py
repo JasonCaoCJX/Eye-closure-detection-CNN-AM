@@ -13,7 +13,7 @@ IMG_SIZE = (24, 24)
 detector = dlib.get_frontal_face_detector()
 predictor = dlib.shape_predictor('../shape_predictor_68_face_landmarks.dat')
 
-model = load_model('models/CNN+AM.h5')
+model = load_model('models/CNN+AM-97.32%.h5')
 model.summary()
 
 
