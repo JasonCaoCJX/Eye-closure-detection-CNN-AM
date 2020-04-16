@@ -17,8 +17,8 @@ def train():
     x_val = np.load('dataset/x_val.npy').astype(np.float32)
     y_val = np.load('dataset/y_val.npy').astype(np.float32)
 
-    # print(x_train.shape, y_train.shape)
-    # print(x_val.shape, y_val.shape)
+    print(x_train.shape, y_train.shape)
+    print(x_val.shape, y_val.shape)
 
     # 预览
     # plt.subplot(2, 1, 1)
@@ -59,7 +59,6 @@ def train():
     # strides: 横向和纵向的步长
     # padding = 'same': 表示不够卷积核大小的块就补0,所以输出和输入形状相同
     # activation = 'relu': 激活函数, ReLU(Rectified Linear Unit,修正线性单元)
-
 
     # 2D输入的最大池化层
     # pool_size: 池窗口的大小
@@ -102,7 +101,7 @@ def train():
         ]
     )
 
-    # 计算精度
+    # 精度计算
     from sklearn.metrics import accuracy_score
 
     model = load_model('models/%s.h5' % start_time)
@@ -111,6 +110,7 @@ def train():
     y_pred_logical = (y_pred > 0.5).astype(np.int)
 
     print('test acc: %s' % accuracy_score(y_val, y_pred_logical))
+
 
 
 if __name__ == '__main__':
